@@ -7,6 +7,6 @@ export function getTitle(): string {
   const params = useParameter<Parameters>(PARAM_KEY);
 
   return params?.mocks?.length
-    ? `Apollo Client (${params.mocks.length})`
-    : 'Apollo Client (0)';
+    ? `Banana (${params.mocks.length})`
+    : 'Banana (0)';
 }
