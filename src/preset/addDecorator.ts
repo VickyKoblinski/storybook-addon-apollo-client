@@ -1,3 +1,3 @@
-import { WithApolloClient } from '../decorators';
+import { WithMockSocket } from '../decorators';
 
-export const decorators = [WithApolloClient];
+export const decorators = [WithMockSocket];

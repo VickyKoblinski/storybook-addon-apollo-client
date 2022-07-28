@@ -7,10 +7,13 @@
   "dependencies": {
     "@storybook/addons": "^6.5.9",
     "@storybook/components": "^6.5.9",
+    "actioncable": "^5.2.8-1",
+    "mock-socket": "^9.1.5",
     "tslib": "^2.4.0"
   },
   "description": "Use Apollo Client in your Storybook stories.",
   "devDependencies": {
+    "@types/actioncable": "^5.2.7",
     "@types/react": "17.x",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "eslint": "^8.18.0",

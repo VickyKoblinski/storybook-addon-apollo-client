@@ -1,25 +1,23 @@
-import { DocumentNode } from "graphql";
-
+import { Cable } from 'actioncable';
 export interface MockedProviderProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
-  mocks?: ReadonlyArray<MockedResponse>;
   children?: React.ReactNode;
+  messages?: ReadonlyArray<MockedMessage>;
 }
 
 export type MockedProvider = React.FC<MockedProviderProps>;
 
 export interface Parameters extends MockedProviderProps {
+  CreateCable: (arg0: string) => Cable;
   MockedProvider: MockedProvider;
 }
 
-export interface MockedResponse {
-  request: {
-    operationName?: string;
-    query: DocumentNode;
-    variables: JSON;
-    context?: JSON;
+export interface MockedMessage {
+  delay: number;
+  identifier: {
+    channel: string;
+    room: number;
   };
-  result?: JSON;
-  error?: Error;
+  message: any;
 }
