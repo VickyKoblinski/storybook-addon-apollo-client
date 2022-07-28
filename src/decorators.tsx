@@ -1,17 +1,21 @@
 import { FC } from 'react';
 import { PARAM_KEY, ADDON_ID } from './constants';
 import { useGlobals, useEffect, useParameter } from '@storybook/addons';
-import { print } from 'graphql';
+
 import type { Parameters } from './types';
 
 import { WebSocket, Server, Client } from 'mock-socket';
 // import createCable from '../src/actioncable';
 
 import ActionCable from 'actioncable';
-import { RenderOptions, types, addons, useState } from '@storybook/addons';
-import { AddonPanel } from '@storybook/components';
+import {
+  // RenderOptions, types, addons,
+  useState,
+} from '@storybook/addons';
+// import { AddonPanel } from '@storybook/components';
 
 /* tslint:disable-next-line */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 (ActionCable as any).WebSocket = WebSocket;
 
 export const WithMockSocket = (Story: FC<unknown>): JSX.Element => {
